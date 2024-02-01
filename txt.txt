@@ -1,0 +1,114 @@
+$(document).ready (function(){
+    $('#idname').click(function(){
+        $('#idname').load('load.html');
+    });
+}); 
+
+
+xml request is use to exchange data with the server 
+ 
+To send a request to a server , we use the open() and send() methods of the xmlhttprequest object 
+
+open( method ,url,async ) specifies the type of request 
+method : get or post 
+url: the server file location 
+async: true (asyncronous) or false (synchronous)
+send() sends the request to the server ( used for GET)
+
+AJAX - server response 
+the readystate property holds the status of the xmlhttprequest
+
+the onreadystatechange property defines a function to be executed when the readystate changes
+the status property and the statustext property holds the status of the xmlhttprequest object 
+-----------------------------------------------------------------------------------------------------
+GET mETHOD
+-----------------------------------------------------------------------------------------------------
+jQuery $.get() Method
+The $.get() method requests data from the server with an HTTP GET request.
+Syntax:
+$.get (URL, callback);
+The required URL parameter specifies the URL you wish to request.
+The optional callback parameter is the name of a function to be executed if the request
+succeeds.
+-------------------------------------------------------------------------------------------------------
+POST mETHOD
+--------------------------------------------------------------------------------------------------------
+jQuery $.post() Method
+The $.post () method requests data from the server using an HTTP POST request.
+Syntax:
+$.post (URL, data, callback);
+The required URL parameter specifies the URL you wish to request.
+The optional data parameter specifies some data to send along with the request.
+The optional callback parameter is the name of a function to be executed if the request
+succeeds.
+
+
+-----------------------------------------------------
+AJAX Syntax
+-----------------------------------------------------
+function myfun (datavalue) {
+$.ajax({
+url: 'class.php',
+type: 'POST',
+data: { datapost : datavalue},
+success: function(result){
+$('#dataget').html(result);
+}
+});
+}
+
+
+
+
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+window. history. back();
+}
+</script>
+
+
+
+
+<!-- <div id="f-bg">
+    <div id="logo">logo</div>
+    <div id="f-list">
+
+        <div id="f-items">
+            <a href="#">Lorem.</a>
+            <a href="#">Lorem.</a>
+        </div>
+        <div id="f-items">
+            <a href="#">Lorem.</a>
+            <a href="#">Lorem.</a>
+        </div>
+    </div>
+</div> -->
+<!-- footer start 
+
+ #f-bg{
+	background: #333;
+	width: 100%;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 30px;
+	margin-top: 60px;
+
+}
+#f-list a{
+	color: plum;
+	
+}
+#f-list a:active{
+	transform: scale(0.95);
+}  -->
+
+
+
+pending things
+
+leader board function
+add user in cpannel 👍
+
